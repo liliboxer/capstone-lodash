@@ -11,8 +11,21 @@ const _ = {
     };
   },
 /////////////////////////////////////////////
-  inRange () {
-
+  inRange (number, startValue, endValue) {
+    if (number < startValue) {
+      return false;
+    } else if (number > endValue) {
+      return false;
+    } else if (number >= startValue && number <= endValue) {
+      return true;
+    } else if (endValue === null) {
+      let startValue = 0;
+      let endValue = 0;
+    } else if (startValue > endValue) {
+      let tmp = startValue;
+      let startValue = endValue;
+      let endValue = tmp;
+    };
   },
 
 
