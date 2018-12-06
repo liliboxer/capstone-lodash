@@ -11,26 +11,24 @@ const _ = {
     };
   },
 /////////////////////////////////////////////
-  inRange (number, startValue, endValue) {
-    if (number < startValue) {
-      return false;
-    } else if (number > endValue) {
-      return false;
-    } else if (number >= startValue && number <= endValue) {
-      return true;
-    } else if (endValue === null) {
-      let startValue = 0;
-      let endValue = 0;
-    } else if (startValue > endValue) {
-      let tmp = startValue;
-      let startValue = endValue;
-      let endValue = tmp;
+  inRange (number, start, end) {
+
+    if (end = undefined) {
+      let end = start;
+      let start = 0;
     };
+
+    if (start > end) {
+      let tmp = start;
+      let start = end;
+      let end = tmp;
+    };
+
+    let isInRange = (start <=number && number < end);
+    return true;
+
+
   },
-
-
-
-
 
 };
 
