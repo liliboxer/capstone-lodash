@@ -25,19 +25,18 @@ const _ = {
     };
 
     if (start > end) {
-      let tmp = start;
-      let start = end;
-      let end = tmp;
+      let tmp = end;
+      let end = start;
+      let start = tmp;
     };
-
-
-
-
 
   },
 /////////////////////////////////////////////
-
-
+  words (string) {
+    let words = string.split(" ");
+    return words
+  },
+/////////////////////////////////////////////
 
 };
 
