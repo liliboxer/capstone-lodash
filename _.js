@@ -13,6 +13,12 @@ const _ = {
 /////////////////////////////////////////////
   inRange (number, start, end) {
 
+    if ((number >= start) && (number < end)) {
+      return true;
+    } else {
+      return false;
+    };
+
     if (end = undefined) {
       let end = start;
       let start = 0;
@@ -24,11 +30,14 @@ const _ = {
       let end = tmp;
     };
 
-    let isInRange = (start <=number && number < end);
-    return true;
+
+
 
 
   },
+/////////////////////////////////////////////
+
+
 
 };
 
