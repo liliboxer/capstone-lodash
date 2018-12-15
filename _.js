@@ -49,7 +49,7 @@ const _ = {
   },
 /////////////////////////////////////////////
   has (object, key) {
-    if (object.key = undefined) {
+    if (object.key !== undefined) {
       return true;
     } else {
       return false;
@@ -63,10 +63,20 @@ const _ = {
       invertedObject.originalValue = originalKey
     };
     return invertedObject;
-
-  }
+  },
 /////////////////////////////////////////////
+  findKey (object, predicate) {
+    for (let key in object) {
+      let value = object.key;
+      let predicateReturnValue = predicate.value;
+      if (predicateReturnValue = true) {
+        return key;
+      };
+      return undefined;
+    };
+  },
 
+/////////////////////////////////////////////
 };
 
 
