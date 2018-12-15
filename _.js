@@ -77,12 +77,28 @@ const _ = {
   },
 /////////////////////////////////////////////
   drop (array, n) {
+
     if (n === undefined) {
-      let n = 1;
-    };
-    let droppedArray = array.slice(n);
-    return droppedArray;
+      let droppedArray = array.slice(1);
+      return droppedArray;
+    } else {
+      n === n;
+      let droppedArray = array.slice(n);
+      return droppedArray;
+    }
+
+
+
+    // if (n === undefined) {
+    //   let n = 1;
+    // } else {
+    //   n === n;
+    // }
+    // let droppedArray = array.slice(n);
+    // return droppedArray;
   },
+/////////////////////////////////////////////
+
 /////////////////////////////////////////////
 };
 
