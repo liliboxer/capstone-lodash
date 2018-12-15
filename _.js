@@ -68,14 +68,21 @@ const _ = {
   findKey (object, predicate) {
     for (let key in object) {
       let value = object.key;
-      let predicateReturnValue = predicate.value;
+      let predicateReturnValue = predicate[object.value];
       if (predicateReturnValue = true) {
         return key;
       };
       return undefined;
     };
   },
-
+/////////////////////////////////////////////
+  drop (array, n) {
+    if (n === undefined) {
+      let n = 1;
+    };
+    let droppedArray = array.slice(n);
+    return droppedArray;
+  },
 /////////////////////////////////////////////
 };
 
