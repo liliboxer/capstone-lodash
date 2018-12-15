@@ -40,17 +40,12 @@ const _ = {
   pad (string, length) {
     if (length <= string.length) {
       return string;
+    } else {
+      let startPaddingLength = Math.floor((length - string.length)/2);
+      let endPaddingLength = length - startPaddingLength - string.length;
+      let paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
+      return paddedString;
     };
-
-  let startPaddingLength = Math.floor((length - string.length)/2);
-
-  let endPaddingLength = length - startPaddingLength - string.length
-
-  let padding = ' '
-
-  console.log(`${padding.repeat(startPaddingLength)} + ${string} + ${padding.repeat(endPaddingLength)}`)
-
-  // let paddedString = padding.repeat(startPaddingLength) + string + padding.repeat(endPaddingLength)
   },
 /////////////////////////////////////////////
   has (object, key) {
