@@ -37,7 +37,21 @@ const _ = {
     return words
   },
 /////////////////////////////////////////////
+  pad (string, length) {
+    if (length <= string.length) {
+      return string;
+    };
 
+  let startPaddingLength = Math.floor((length - string.length)/2);
+
+  let endPaddingLength = length - startPaddingLength - string.length
+
+  let padding = ' '
+
+  let paddedString = padding.repeat(startPaddingLength) + string + padding.repeat(endPaddingLength)
+
+  },
+/////////////////////////////////////////////
 };
 
 
