@@ -13,23 +13,22 @@ const _ = {
 /////////////////////////////////////////////
   inRange (number, start, end) {
 
+    if (end === undefined) {
+      end = start;
+      start = 0;
+    };
+
+    if (start > end) {
+      let tmp = start;
+      start = end;
+      end = tmp;
+    };
+
     if ((number >= start) && (number < end)) {
       return true;
     } else {
       return false;
     };
-
-    if (end = undefined) {
-      let end = start;
-      let start = 0;
-    };
-
-    if (start > end) {
-      let tmp = end;
-      let end = start;
-      let start = tmp;
-    };
-
   },
 /////////////////////////////////////////////
   words (string) {
@@ -53,7 +52,7 @@ const _ = {
       return true;
     } else {
       return false;
-    };
+    }
   },
 /////////////////////////////////////////////
   invert (originalObject) {
@@ -67,9 +66,9 @@ const _ = {
 /////////////////////////////////////////////
   findKey (object, predicate) {
     for (let key in object) {
-      let value = object.key;
-      let predicateReturnValue = predicate[object.value];
-      if (predicateReturnValue = true) {
+      let value = object[key];
+      let predicateReturnValue = predicate(value);
+      if (predicateReturnValue === true) {
         return key;
       };
       return undefined;
