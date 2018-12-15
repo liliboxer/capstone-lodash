@@ -48,10 +48,30 @@ const _ = {
 
   let padding = ' '
 
-  let paddedString = padding.repeat(startPaddingLength) + string + padding.repeat(endPaddingLength)
+  console.log(`${padding.repeat(startPaddingLength)} + ${string} + ${padding.repeat(endPaddingLength)}`)
 
+  // let paddedString = padding.repeat(startPaddingLength) + string + padding.repeat(endPaddingLength)
   },
 /////////////////////////////////////////////
+  has (object, key) {
+    if (object.key = undefined) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+/////////////////////////////////////////////
+  invert (originalObject) {
+    let invertedObject = {};
+    for (let originalKey in originalObject) {
+      let originalValue = originalObject.originalKey;
+      invertedObject.originalValue = originalKey
+    };
+    return invertedObject;
+
+  }
+/////////////////////////////////////////////
+
 };
 
 
