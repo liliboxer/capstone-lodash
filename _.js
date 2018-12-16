@@ -70,9 +70,9 @@ const _ = {
       let predicateReturnValue = predicate(value);
       if (predicateReturnValue === true) {
         return key;
-      };
-      return undefined;
+      }
     };
+    return undefined;
   },
 /////////////////////////////////////////////
   drop (array, n) {
@@ -89,22 +89,20 @@ const _ = {
 /////////////////////////////////////////////
 
   dropWhile (array, predicate) {
-    let dropNumber = array.findIndex;
   },
 
 /////////////////////////////////////////////
   chunk (array, size) {
-    let arrayChunks = [];
+
+    let smallArray = [];
     let finalArray = [];
-    if (size = undefined) {
-      return array;
-    } else {
-        for (let i = 0; i < array.length; i++) {
-          arrayChunks.push[array[i]];
-        };
-        finalArray.push[arrayChunks];
-        console.log(finalArray);
-    };
+    for (let i = 0; i < array.length; i++) {
+      smallArray.push(array[i]);
+      finalArray.push(smallArray);
+      smallArray = [];
+    }
+    
+    return finalArray;
 
   },
 /////////////////////////////////////////////
