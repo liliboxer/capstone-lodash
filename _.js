@@ -94,16 +94,12 @@ const _ = {
 /////////////////////////////////////////////
   chunk (array, size) {
 
-    let smallArray = [];
     let finalArray = [];
-    for (let i = 0; i < array.length; i++) {
-      smallArray.push(array[i]);
+    for (let i = 0; i < array.length; i = i + size) {
+      let smallArray = array.slice(i, i + size)
       finalArray.push(smallArray);
-      smallArray = [];
     }
-    
     return finalArray;
-
   },
 /////////////////////////////////////////////
 };
