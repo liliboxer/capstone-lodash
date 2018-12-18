@@ -81,7 +81,6 @@ const _ = {
       let droppedArray = array.slice(1);
       return droppedArray;
     } else {
-      n === n;
       let droppedArray = array.slice(n);
       return droppedArray;
     };
@@ -89,6 +88,15 @@ const _ = {
 /////////////////////////////////////////////
 
   dropWhile (array, predicate) {
+
+    let flippedPredicate = (element, index, array) => {
+      return !predicate(element, index, array);
+    };
+
+    let dropNumber = array.findIndex(flippedPredicate);
+    let droppedArray = _.drop(array, dropNumber);
+    return droppedArray;
+
   },
 
 /////////////////////////////////////////////
